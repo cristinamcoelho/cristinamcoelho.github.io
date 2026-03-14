@@ -1,6 +1,5 @@
 'use strict';
 
-// ─── Typed.js hero animation ─────────────────────────────────────────────────
 (function initTyped() {
   const el = document.querySelector('.typed');
   if (!el) return;
@@ -14,7 +13,6 @@
   });
 })();
 
-// ─── Mobile nav toggle ───────────────────────────────────────────────────────
 (function initMobileNav() {
   const toggle = document.querySelector('.mobile-nav-toggle');
   if (!toggle) return;
@@ -26,7 +24,6 @@
     icon.classList.toggle('icofont-close');
   });
 
-  // Close nav when clicking outside the sidebar
   document.addEventListener('click', (e) => {
     if (!document.body.classList.contains('mobile-nav-active')) return;
     const header = document.getElementById('header');
@@ -38,7 +35,6 @@
     }
   });
 
-  // Close nav on nav link click (mobile)
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
       if (document.body.classList.contains('mobile-nav-active')) {
@@ -51,7 +47,6 @@
   });
 })();
 
-// ─── Active nav highlight on scroll (IntersectionObserver) ───────────────────
 (function initNavHighlight() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-menu a');
@@ -72,7 +67,6 @@
   sections.forEach(section => observer.observe(section));
 })();
 
-// ─── Back-to-top button ───────────────────────────────────────────────────────
 (function initBackToTop() {
   const btn = document.querySelector('.back-to-top');
   if (!btn) return;
@@ -89,8 +83,12 @@
   });
 })();
 
-// ─── AOS (Animate On Scroll) ─────────────────────────────────────────────────
 window.addEventListener('load', () => {
+  ['css-icofont', 'css-boxicons', 'css-aos'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.media = 'all';
+  });
+
   AOS.init({
     duration: 1000,
     easing: 'ease-in-out',
