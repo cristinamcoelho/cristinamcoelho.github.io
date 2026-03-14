@@ -1,6 +1,3 @@
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -30,9 +27,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Skip link (accessibility)
---------------------------------------------------------------*/
 .skip-link {
   position: absolute;
   top: -100%;
@@ -52,9 +46,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
   display: none;
@@ -86,9 +77,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #2eafec;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
 #header {
   position: fixed;
   top: 0;
@@ -160,9 +148,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
 .nav-menu {
   padding-top: 60px;
 }
@@ -181,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: flex;
   align-items: center;
-  color: #c2c3cc; /* Improved from #a8a9b4 for WCAG AA contrast on dark sidebar */
+  color: #c2c3cc;
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: color 0.3s;
@@ -208,7 +193,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #149ddd;
 }
 
-/* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
   right: 15px;
@@ -239,17 +223,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
-  /* WebP with JPEG fallback using image-set */
-  background-image: image-set(
-    url("../img/hero-bg.webp") type("image/webp"),
-    url("../img/hero-bg.jpg") type("image/jpeg")
-  );
+  background-image: url("../img/hero-bg.webp");
   background-position: top center;
   background-size: cover;
 }
@@ -308,9 +285,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -348,9 +322,6 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Resume
---------------------------------------------------------------*/
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -409,16 +380,10 @@ section {
   border: 2px solid #1f5297;
 }
 
-/*--------------------------------------------------------------
-# Consultório
---------------------------------------------------------------*/
 #consultorio .row {
   margin-top: 10vh;
 }
 
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
 .contact .info {
   padding: 30px;
   background: #fff;
