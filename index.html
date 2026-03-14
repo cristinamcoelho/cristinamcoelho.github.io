@@ -15,11 +15,14 @@
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="2fGqVsJeLdGfhnXFm1-Bc2MTM1VvCMo0OlDePiFLBd0">
 
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; frame-src https://www.google.com; base-uri 'self'; form-action 'none';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
   <link rel="canonical" href="https://cristinamcoelho.github.io/">
   <link rel="alternate" hreflang="pt-PT" href="https://cristinamcoelho.github.io/">
   <link rel="alternate" hreflang="x-default" href="https://cristinamcoelho.github.io/">
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cristinamcoelho.github.io/">
   <meta property="og:title" content="Cristina Coelho – Psicóloga Clínica &amp; Sexologista | Porto">
@@ -28,49 +31,51 @@
   <meta property="og:image" content="https://cristinamcoelho.github.io/assets/img/profile-img.webp">
   <meta property="og:locale" content="pt_PT">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cristina Coelho – Psicóloga Clínica &amp; Sexologista | Porto">
   <meta name="twitter:description"
     content="Psicóloga Clínica especializada em Sexologia Clínica, Terapia Familiar e de Casal.">
   <meta name="twitter:image" content="https://cristinamcoelho.github.io/assets/img/profile-img.webp">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Preload above-the-fold hero background (critical for LCP) -->
   <link rel="preload" as="image" href="assets/img/hero-bg.webp" type="image/webp" fetchpriority="high">
 
-  <!-- Google Fonts: preconnect for speed, swap to avoid FOIT, reduced weights -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet">
 
-  <!-- Bootstrap: render-blocking (needed for layout) -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Main CSS: render-blocking (needed for layout) -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Non-critical CSS: deferred to avoid blocking first paint -->
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet"></noscript>
-
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"></noscript>
-
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"></noscript>
-
-  <!-- Fallback: make AOS-hidden elements visible when JS is disabled -->
+  <link id="css-icofont" href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" media="print">
   <noscript>
-    <style>[data-aos]{opacity:1!important;transform:none!important;transition:none!important}</style>
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   </noscript>
 
-  <!-- Structured Data (JSON-LD): Person + LocalBusiness for rich search results -->
+  <link id="css-boxicons" href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" media="print">
+  <noscript>
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  </noscript>
+
+  <link id="css-aos" href="assets/vendor/aos/aos.css" rel="stylesheet" media="print">
+  <noscript>
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  </noscript>
+
+  <noscript>
+    <style>
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important
+      }
+    </style>
+  </noscript>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -92,9 +97,7 @@
           "addressLocality": "Porto",
           "addressCountry": "PT"
         },
-        "sameAs": [
-          "https://www.linkedin.com/in/cristina-coelho-90a3a648"
-        ]
+        "sameAs": ["https://www.linkedin.com/in/cristina-coelho-90a3a648"]
       },
       {
         "@type": ["LocalBusiness", "MedicalOrganization"],
@@ -118,14 +121,9 @@
           "latitude": 41.15370691841115,
           "longitude": -8.61161138427811
         },
-        "areaServed": {
-          "@type": "City",
-          "name": "Porto"
-        },
-        "employee": { "@id": "https://cristinamcoelho.github.io/#person" },
-        "sameAs": [
-          "https://www.linkedin.com/in/cristina-coelho-90a3a648"
-        ]
+        "areaServed": {"@type": "City", "name": "Porto"},
+        "employee": {"@id": "https://cristinamcoelho.github.io/#person"},
+        "sameAs": ["https://www.linkedin.com/in/cristina-coelho-90a3a648"]
       }
     ]
   }
@@ -134,15 +132,12 @@
 
 <body>
 
-  <!-- Skip to main content (accessibility for keyboard/screen reader users) -->
   <a href="#main" class="skip-link">Saltar para o conteúdo principal</a>
 
-  <!-- ======= Mobile nav toggle button ======= -->
   <button type="button" class="mobile-nav-toggle d-xl-none" aria-label="Abrir menu de navegação">
     <i class="icofont-navigation-menu"></i>
   </button>
 
-  <!-- ======= Header ======= -->
   <header id="header">
     <div class="d-flex flex-column">
 
@@ -165,12 +160,11 @@
           <li><a href="#consultorio"><i class="bx bx-building"></i> <span>Consultório</span></a></li>
           <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Cristina Coelho</h1>
@@ -178,11 +172,10 @@
           data-typed-items="Psicóloga Clínica, Especialista em Sexologia Clínica, Formação em Terapia Familiar e de Casal"></span>
       </p>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
 
-    <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
       <div class="container">
 
@@ -238,7 +231,8 @@
 
             <div class="resume-item">
               <h4>Formação Adicional</h4>
-              <p>Várias formações nacionais e internacionais na área da Sexologia e Terapias Sistémicas, nomeadamente:</p>
+              <p>Várias formações nacionais e internacionais na área da Sexologia e Terapias Sistémicas, nomeadamente:
+              </p>
               <ul>
                 <li>European Society for Sexual Medicine (ESSM preparation courses, 2016, Madrid)</li>
                 <li>World Association for Sexual Health (WAS)</li>
@@ -259,6 +253,7 @@
                 abrangia o acompanhamentos de inimputáveis e reclusos de Regime Comum, bem como apoio técnico ao
                 Tribunal de Execução de Penas (TEP) e articulação inter-equipas que funcionavam na comunidade.</p>
             </div>
+
             <div class="resume-item">
               <h4>Psicóloga – Comissão Extraordinária de Serviço</h4>
               <h5>2001 – 2005</h5>
@@ -282,19 +277,16 @@
               <h5>2007 – Presente</h5>
               <p><em>Hospital de Magalhães Lemos, EPE</em></p>
               <p>A área de intervenção abrange a consulta externa e Internamento.</p>
-              <p>
-                <strong>Consulta Externa:</strong>
+              <p><strong>Consulta Externa:</strong></p>
               <ul>
                 <li>Psicoterapia Individual</li>
                 <li>Intervenção Sistémica em Famílias e Casais</li>
                 <li>Sexologia – Disfunções Sexuais e Acompanhamento de Agressores Sexuais (protocolo com a DGRSP)</li>
               </ul>
-
-              <strong>Internamento:</strong>
+              <p><strong>Internamento:</strong></p>
               <ul>
                 <li>Intervenção em Crise e Avaliação, no Serviço de Intervenção Intensiva (SII) do Hospital</li>
               </ul>
-              </p>
             </div>
 
             <h3 class="resume-title">Trabalhos Publicados</h3>
@@ -312,8 +304,7 @@
         </div>
 
       </div>
-    </section><!-- End Resume Section -->
-
+    </section>
 
     <section id="consultorio" class="vh-100 section-bg">
       <div class="container">
@@ -323,7 +314,6 @@
 
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-7 d-flex justify-content-center align-items-center">
-
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -344,11 +334,8 @@
         </div>
 
       </div>
+    </section>
 
-
-    </section><!-- End Consultório Section -->
-
-    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact min-vh-100">
       <div class="container">
         <div class="section-title">
@@ -385,18 +372,15 @@
           </div>
         </div>
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
   <a href="#" class="back-to-top" aria-label="Voltar ao topo"><i class="icofont-simple-up"></i></a>
 
-  <!-- Vendor JS (only what is actually used) -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-
-  <!-- Main JS -->
   <script src="assets/js/main.js"></script>
 
 </body>
