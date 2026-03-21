@@ -384,6 +384,18 @@ section {
   margin-top: 10vh;
 }
 
+#carouselExampleFade .carousel-inner,
+#carouselExampleFade .carousel-item {
+  height: 520px;
+}
+
+#carouselExampleFade .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .contact .info {
   padding: 30px;
   background: #fff;
